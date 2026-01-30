@@ -3,11 +3,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private float timeInSeconds = 12 * 60;
+    [SerializeField] private float timeInSeconds;
     private float currentTimer;
     private bool gameStarted;
     
-    private Image timerImage;
+    [SerializeField] private Image timerImage;
     
     private void Start()
     {
