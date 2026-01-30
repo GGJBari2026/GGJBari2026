@@ -1,45 +1,36 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private Mask currentMask;
-    private Mask targetMask;
-
-    private int success;
-    private int failures;
+    [SerializeField] private float timeInSeconds = 12 * 60;
+    private float currentTimer;
+    private bool gameStarted;
+    
+    private Image timerImage;
     
     private void Start()
     {
-        UpdateTargetMask();
+        StartGame();
     }
 
-    private void UpdateTargetMask()
+    private void Update()
     {
-        targetMask = MaskGenerator.GenerateRandomMask();
+        while (!gameStarted) return;
+        currentTimer -= Time.deltaTime;
+        
+        timerImage.fillAmount = currentTimer / timeInSeconds;
+        
+        if (currentTimer <= 0)
+        {
+            gameStarted = false;
+            Debug.Log("Time's up! Game Over.");
+        }
     }
     
-    public void SetCurrentMaskShape(MaskShape shape)
+    private void StartGame()
     {
-        currentMask.shape = shape;
-    }
-    
-    public void SetCurrentMaskColor(MaskColor color)
-    {
-        currentMask.color = color;
-    }
-    
-    public void SetCurrentMaskEyes(MaskEyes eyes)
-    {
-        currentMask.eyes = eyes;
-    }
-    
-    public void SetCurrentMaskMouth(MaskMouth mouth)
-    {
-        currentMask.mouth = mouth;
-    }
-    
-    public bool CheckMask()
-    {
-        return currentMask == targetMask;
+        gameStarted = true;
+        currentTimer = timeInSeconds;
     }
 }
