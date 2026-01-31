@@ -5,7 +5,7 @@ public class PauseManager : MonoBehaviour
 {
     public GameObject pauseMenu; // il Panel PauseMenu
 
-    private bool isPaused = false;
+    public static bool isPaused = false;
 
     void Update()
     {
@@ -45,4 +45,5 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f; // riprende il tempo prima di cambiare scena
         SceneManager.LoadScene("MainMenu");
     }
+
 }
