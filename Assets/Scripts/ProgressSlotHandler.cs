@@ -17,7 +17,7 @@ public class ProgressSlotHandler : MonoBehaviour
 
     private int currentValue;
     private int secondaryCurrentValue = -1;
-    [SerializeField] private Image currentImage;
+    [SerializeField] private MaskTemplateBuilder currentMask;
 
     private void Start()
     {
@@ -35,7 +35,7 @@ public class ProgressSlotHandler : MonoBehaviour
                 if (isOn)
                 {
                     currentValue = index;
-                    currentImage.sprite = image.sprite;
+                    ApplyTemplateMask();
                 }
             });
             
@@ -43,7 +43,7 @@ public class ProgressSlotHandler : MonoBehaviour
             {
                 toggle.isOn = true;
                 currentValue = 0;
-                currentImage.sprite = image.sprite;
+                ApplyTemplateMask();
             }
         }
         
@@ -63,6 +63,7 @@ public class ProgressSlotHandler : MonoBehaviour
                     if (isOn)
                     {
                         secondaryCurrentValue = index;
+                        ApplyTemplateMask();
                     }
                 });
                 
@@ -70,9 +71,18 @@ public class ProgressSlotHandler : MonoBehaviour
                 {
                     toggle.isOn = true;
                     secondaryCurrentValue = 0;
+                    ApplyTemplateMask();
                 }
             }
         }
+    }
+
+    private void ApplyTemplateMask()
+    {
+        var maskCopy = SlotsManager.slotsManager.slots[slotIndex].currentMask.DeepCopy();
+        maskCopy.attributes[key] = currentValue;
+        if (secondaryCurrentValue >= 0) maskCopy.colors[key] = secondaryCurrentValue;
+        currentMask.GenerateMask(maskCopy);
     }
 
     public void Done()
