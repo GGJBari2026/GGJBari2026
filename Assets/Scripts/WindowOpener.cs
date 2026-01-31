@@ -1,16 +1,18 @@
+using System;
 using UnityEngine;
 
 public class WindowOpener : MonoBehaviour
 {
     [SerializeField] private int windowIndex;
-    
+
+    private void Start()
+    {
+        gameObject.GetComponent<Interactable>().SetAction(OpenWindow);
+    }
+
     public void OpenWindow()
     {
-        WindowManager windowManager = FindObjectOfType<WindowManager>();
-        if (windowManager != null)
-        {
-            windowManager.OpenWindow(windowIndex);
-        }
+        WindowManager.windowManager.OpenWindow(windowIndex);
     }
     
 }

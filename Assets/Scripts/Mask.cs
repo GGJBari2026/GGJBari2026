@@ -1,50 +1,37 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class Mask
 {
-    public MaskShape shape;
-    public MaskColor color;
-    public MaskEyes eyes;
-    public MaskMouth mouth;
-    
+    public Dictionary<string, int> attributes = new();
+
     public static bool operator ==(Mask a, Mask b)
     {
-        return a.shape == b.shape &&
-               a.color == b.color &&
-               a.eyes == b.eyes &&
-               a.mouth == b.mouth;
+        if (a.attributes.Count != b.attributes.Count) return false;
+
+        foreach (var key in a.attributes.Keys)
+        {
+            if (!b.attributes.ContainsKey(key) || a.attributes[key] != b.attributes[key])
+                return false;
+        }
+
+        return true;
     }
 
     public static bool operator !=(Mask a, Mask b)
     {
         return !(a == b);
     }
+
+    public override bool Equals(object obj)
+    {
+        if (obj is Mask otherMask)
+        {
+            return this == otherMask;
+        }
+        return false;
+    }
 }
 
-public enum MaskShape
-{
-    Circle,
-    Square,
-    Triangle
-}
-
-public enum MaskColor
-{
-    Red,
-    Green,
-    Blue
-}
-
-public enum MaskEyes
-{
-    Open,
-    Closed,
-    Winking
-}
-
-public enum MaskMouth
-{
-    Smile,
-    Frown,
-    Neutral
-}

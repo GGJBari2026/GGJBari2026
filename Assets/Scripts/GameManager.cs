@@ -1,14 +1,25 @@
+using System;
+using AYellowpaper.SerializedCollections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private float timeInSeconds;
+    public static GameManager gameManager;
     private float currentTimer;
-    private bool gameStarted;
+    public bool gameStarted;
     
     [SerializeField] private Image timerImage;
     
+    [SerializedDictionary("Attribute", "Sprites")]
+    public AYellowpaper.SerializedCollections.SerializedDictionary<string, Sprite[]> masksSprites;
+
+    private void Awake()
+    {
+        gameManager = this;
+    }
+
     private void Start()
     {
         StartGame();
