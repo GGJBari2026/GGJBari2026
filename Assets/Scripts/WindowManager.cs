@@ -34,5 +34,6 @@ public class WindowManager : MonoBehaviour
     {
         orderWindow.GetComponent<OrderWindowHandler>().client = client;
         orderWindow.SetActive(true);
+        windowOpened = true;
     }
 }

@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     
     [SerializedDictionary("Attribute", "Sprites")]
     public AYellowpaper.SerializedCollections.SerializedDictionary<string, Sprite[]> masksSprites;
+    
+    [SerializedDictionary("Attribute", "Colors")]
+    public AYellowpaper.SerializedCollections.SerializedDictionary<string, Sprite[]> masksColors;
 
     public int ordersTaken;
     public int ordersCompleted;

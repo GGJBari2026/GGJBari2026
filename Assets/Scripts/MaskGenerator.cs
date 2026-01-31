@@ -7,9 +7,14 @@ public static class MaskGenerator
         var mask = new Mask();
         foreach (var att in GameManager.gameManager.masksSprites)
         {
-            //mask.attributes.Add(att.Key, Random.Range(0, att.Value.Length));
+            mask.attributes.Add(att.Key, Random.Range(0, att.Value.Length));
         }
-
+        
+        foreach (var att in GameManager.gameManager.masksColors)
+        {
+            mask.colors.Add(att.Key, Random.Range(0, att.Value.Length));
+        }
+        
         return mask;
     }
 }

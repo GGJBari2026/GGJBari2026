@@ -86,11 +86,7 @@ public class ClientManager : MonoBehaviour
         
         GameManager.gameManager.ordersCompleted += 1;
         
-        Destroy(gameObject);
-    }
-
-    private void OnDestroy()
-    {
         OnEnd?.Invoke();
+        Destroy(gameObject);
     }
 }

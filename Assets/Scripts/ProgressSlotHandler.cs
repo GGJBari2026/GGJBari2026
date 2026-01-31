@@ -12,8 +12,11 @@ public class ProgressSlotHandler : MonoBehaviour
     
     [SerializeField] private ToggleGroup togglesParent;
     [SerializeField] private GameObject togglePrefab;
+    
+    [SerializeField] private ToggleGroup secondaryParent;
 
     private int currentValue;
+    private int secondaryCurrentValue = -1;
     [SerializeField] private Image currentImage;
 
     private void Start()
@@ -43,12 +46,39 @@ public class ProgressSlotHandler : MonoBehaviour
                 currentImage.sprite = image.sprite;
             }
         }
+        
+        if (secondaryParent != null)
+        {
+            var secondarySprites = GameManager.gameManager.masksColors[key];
+            for (var i = 0; i < secondarySprites.Length; i++)
+            {
+                var toggleObj = Instantiate(togglePrefab, secondaryParent.transform);
+                var toggle = toggleObj.GetComponent<Toggle>();
+                var image = toggleObj.GetComponentInChildren<Image>();
+                image.sprite = secondarySprites[i];
+                toggle.group = secondaryParent;
+                var index = i; // Capture the current value of i
+                toggle.onValueChanged.AddListener(isOn =>
+                {
+                    if (isOn)
+                    {
+                        secondaryCurrentValue = index;
+                    }
+                });
+                
+                if (i == 0)
+                {
+                    toggle.isOn = true;
+                    secondaryCurrentValue = 0;
+                }
+            }
+        }
     }
 
     public void Done()
     {
         var slot = SlotsManager.slotsManager.slots[slotIndex];
-        slot.Progress(key, currentValue);
+        slot.Progress(key, currentValue, secondaryCurrentValue);
         CheckDisable();
     }
 

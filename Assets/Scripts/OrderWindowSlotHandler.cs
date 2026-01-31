@@ -11,8 +11,7 @@ public class OrderWindowSlotHandler : MonoBehaviour
     
     public void Send()
     {
-        var slot = SlotsManager.slotsManager.slots[slotIndex];
-        slot.Clear(orderWindowHandler.client.generatedOrder);
+        orderWindowHandler.client.SendOrder(slotIndex);
         orderWindowHandler.CloseWindow();
     }
 
