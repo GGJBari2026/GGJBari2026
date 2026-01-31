@@ -1,11 +1,14 @@
 using System;
 using System.Collections.Generic;
+using AYellowpaper.SerializedCollections;
 using UnityEngine;
+
 
 [Serializable]
 public class Mask
 {
-    public Dictionary<string, int> attributes = new();
+    [SerializedDictionary("Attribute", "Index")]
+    public SerializedDictionary<string, int> attributes = new();
 
     public static bool operator ==(Mask a, Mask b)
     {
@@ -31,7 +34,7 @@ public class Mask
         {
             return this == otherMask;
         }
+
         return false;
     }
 }
-

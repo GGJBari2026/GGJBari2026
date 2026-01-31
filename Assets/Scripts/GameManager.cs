@@ -15,6 +15,16 @@ public class GameManager : MonoBehaviour
     [SerializedDictionary("Attribute", "Sprites")]
     public AYellowpaper.SerializedCollections.SerializedDictionary<string, Sprite[]> masksSprites;
 
+    public int ordersTaken;
+    public int ordersCompleted;
+    
+    public int ordersHappy;
+    public int ordersIrritated;
+    public int ordersAngry;
+    
+    public int ordersCorrect;
+    public int totalErrors;
+
     private void Awake()
     {
         gameManager = this;
@@ -43,5 +53,15 @@ public class GameManager : MonoBehaviour
     {
         gameStarted = true;
         currentTimer = timeInSeconds;
+    }
+    
+    public void AddTime(float seconds)
+    {
+        currentTimer += seconds;
+    }
+    
+    public void SubtractTime(float seconds)
+    {
+        currentTimer -= seconds;
     }
 }

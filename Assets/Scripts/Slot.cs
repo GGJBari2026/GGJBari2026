@@ -20,14 +20,21 @@ public class Slot
         state += 1;
     }
     
-    public bool Clear()
+    public int Clear()
     {
-        var match = currentMask == targetMask;
+        var errors = 0;
+        foreach (var key in targetMask.attributes.Keys)
+        {
+            if (!currentMask.attributes.ContainsKey(key) || currentMask.attributes[key] != targetMask.attributes[key])
+            {
+                errors++;
+            }
+        }
         targetMask = null;
         currentMask = null;
         state = SlotState.Empty;
         
-        return match;
+        return errors;
     }
 }
 
