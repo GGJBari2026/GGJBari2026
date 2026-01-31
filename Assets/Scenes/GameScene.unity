@@ -2179,10 +2179,10 @@ MonoBehaviour:
       - {fileID: 21300000, guid: 3f265026934a1494e8a4e0e0d556eebc, type: 3}
     - Key: pattern
       Value:
-      - {fileID: 21300000, guid: ccf14431031da4834b7c430f530eeb70, type: 3}
       - {fileID: 21300000, guid: 8370c8f1866be49758c19d25078ee79b, type: 3}
       - {fileID: 21300000, guid: b07edb51a0db242d8b2bdfd2ae20ece2, type: 3}
       - {fileID: 21300000, guid: cdda9ab29676f4bff86407fb1d31f834, type: 3}
+      - {fileID: 21300000, guid: ccf14431031da4834b7c430f530eeb70, type: 3}
     - Key: decoration
       Value:
       - {fileID: 21300000, guid: 429a6329d76034d19952b4f39f45abe1, type: 3}

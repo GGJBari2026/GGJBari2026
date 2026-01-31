@@ -16,7 +16,7 @@ public class OrderShowSlotHandler : MonoBehaviour
 
     private void CheckDisable()
     {
-        disabledImage.enabled = SlotsManager.slotsManager.slots[slotIndex].state != SlotState.Complete;
+        disabledImage.enabled = false;
     }
     
 }
