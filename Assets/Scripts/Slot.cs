@@ -2,16 +2,8 @@ using UnityEngine;
 
 public class Slot
 {
-    public Mask targetMask;
-    public Mask currentMask;
-    public SlotState state = SlotState.Empty;
-
-    public void SetOnShape(Mask targetMask)
-    {
-        this.targetMask = targetMask;
-        currentMask = new Mask();
-        state = SlotState.OnShape;
-    }
+    public Mask currentMask = new();
+    public SlotState state = SlotState.OnShape;
 
     public void Progress(string key, int value)
     {
@@ -20,7 +12,7 @@ public class Slot
         state += 1;
     }
     
-    public int Clear()
+    public int Clear(Mask targetMask)
     {
         var errors = 0;
         foreach (var key in targetMask.attributes.Keys)
@@ -30,9 +22,8 @@ public class Slot
                 errors++;
             }
         }
-        targetMask = null;
         currentMask = null;
-        state = SlotState.Empty;
+        state = SlotState.OnShape;
         
         return errors;
     }
@@ -40,10 +31,9 @@ public class Slot
 
 public enum SlotState
 {
-    Empty,
     OnShape,
     OnColor,
-    OnEyes,
-    OnMouth,
+    OnPattern,
+    OnMEyesouth,
     Complete
 }

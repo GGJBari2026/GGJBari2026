@@ -12,6 +12,9 @@ public class Mask
 
     public static bool operator ==(Mask a, Mask b)
     {
+        if (a is null && b is null) return true;
+        if (a is null || b is null) return false;
+        
         if (a.attributes.Count != b.attributes.Count) return false;
 
         foreach (var key in a.attributes.Keys)

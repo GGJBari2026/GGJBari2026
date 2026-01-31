@@ -9,13 +9,11 @@ public class ClientManager : MonoBehaviour
     [SerializeField] private float patienceHappy;
     [SerializeField] private float patienceIrritated;
     [SerializeField] private bool special;
-    [SerializeField] private Mask generatedOrder;
+    [SerializeField] public Mask generatedOrder;
     [SerializeField] private Interactable interactable;
     
     [SerializeField] private Transform patienceBar;
     private float currentTimer;
-
-    private int slotNumber = -1;
 
     private bool orderStarted;
     
@@ -44,22 +42,25 @@ public class ClientManager : MonoBehaviour
     public void StartOrder()
     {
         orderStarted = true;
-        var slot = SlotsManager.slotsManager.TryAssignSlot(generatedOrder);
+        var slot = MaskSlotsManager.maskSlotsManager.TryAssignMaskSlot(generatedOrder);
         if (slot != -1)
         {
-            slotNumber = slot;
-            interactable.SetAction(SendOrder);
+            interactable.SetAction(OpenOrderWindow);
+            GameManager.gameManager.ordersTaken += 1;
         }
-        
-        GameManager.gameManager.ordersTaken += 1;
     }
     
-    public void SendOrder()
+    public void OpenOrderWindow()
+    {
+        WindowManager.windowManager.OpenOrderWindow(this);
+    }
+    
+    public void SendOrder(int slotNumber)
     {
         var slot = SlotsManager.slotsManager.slots[slotNumber];
         if (slot.state != SlotState.Complete)
             return;
-        var errors = slot.Clear();
+        var errors = slot.Clear(generatedOrder);
         if (errors == 0)
         {
             if (currentTimer >= patienceHappy)

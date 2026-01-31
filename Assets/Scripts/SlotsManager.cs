@@ -10,20 +10,4 @@ public class SlotsManager : MonoBehaviour
     {
         slotsManager = this;
     }
-
-    public int TryAssignSlot(Mask targetMask)
-    {
-        for (var i = 0; i < slots.Length; i++)
-        {
-            var slot = slots[i];
-            if (slot.state == SlotState.Empty)
-            {
-                slot.SetOnShape(targetMask);
-                return i;
-            }
-        }
-
-        return -1;
-    }
-    
 }
