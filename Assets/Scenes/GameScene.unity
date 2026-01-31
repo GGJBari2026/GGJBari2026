@@ -447,11 +447,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae37548dfc59f40c89cf76b70c098160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClientSpawner
-  spawnPrefabsAndChance:
-    _serializedList:
-    - Key: {fileID: 5434098778038927194, guid: d46d18d1a2de148b396be57eac576b84, type: 3}
-      Value: 1
-  spawnDelay: 2
+  spawnSprites:
+  - {fileID: 21300000, guid: 0fbb853801415409da8d3e1c410761f2, type: 3}
+  - {fileID: 21300000, guid: c45303f80fbd4491283fd1edfec7d601, type: 3}
+  - {fileID: 21300000, guid: 96fc3836220084df99f5eb065f726ef0, type: 3}
+  - {fileID: 21300000, guid: a27d71f7171de4f22be96aae135ace6e, type: 3}
+  - {fileID: 21300000, guid: 25fc841d3fe164365bcf7f5893c6cb79, type: 3}
+  - {fileID: 21300000, guid: 9d25dee4b04c5433ba445d6d0dbeb0d9, type: 3}
+  - {fileID: 21300000, guid: a1fa267af01af41edb4abecb7d569f48, type: 3}
+  - {fileID: 21300000, guid: 645ce158e35bc441bbf496f04ffcf558, type: 3}
+  - {fileID: 21300000, guid: df571d491db2742d786bc66c3e0dba23, type: 3}
+  - {fileID: 21300000, guid: 3c8d95a97bde74468b5366caa8802e72, type: 3}
+  - {fileID: 21300000, guid: 6ec9cb017929a4657b714cefaee079b4, type: 3}
+  - {fileID: 21300000, guid: 62f7bef44320b42619348d7409c49ccc, type: 3}
+  - {fileID: 21300000, guid: d883340753cb9437abd604e70fc3e272, type: 3}
+  - {fileID: 21300000, guid: 3377a7fa0699548588d71b1630adb590, type: 3}
+  - {fileID: 21300000, guid: c871620e94e3a4b1abe90f80eb378629, type: 3}
+  - {fileID: 21300000, guid: 908f001439ccf4cf794c77b32e0c55a3, type: 3}
+  - {fileID: 21300000, guid: 05e726ef1b57e4634832933b84958281, type: 3}
+  - {fileID: 21300000, guid: 1d1a6710570c841699eaa656dd069497, type: 3}
+  - {fileID: 21300000, guid: 3c55c70a146524c0b93bac7c3ee20942, type: 3}
+  - {fileID: 21300000, guid: 9f9de4048a410478fb11488a4558346d, type: 3}
+  - {fileID: 21300000, guid: 962fa0812dff045ce83a48996a84d3ed, type: 3}
+  - {fileID: 21300000, guid: 1295b6ae7f660478b883f51b29bf69cd, type: 3}
+  - {fileID: 21300000, guid: 6f13686365e324c23a87026a94f42531, type: 3}
+  spawnChances: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  clientPrefab: {fileID: 5434098778038927194, guid: d46d18d1a2de148b396be57eac576b84, type: 3}
+  spawnDelay: 1
 --- !u!4 &156082275
 Transform:
   m_ObjectHideFlags: 0
@@ -1597,7 +1619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 17.300049, y: 5.200012}
+  m_AnchoredPosition: {x: 17.300049, y: 5.199951}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &436302042
@@ -2542,11 +2564,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae37548dfc59f40c89cf76b70c098160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClientSpawner
-  spawnPrefabsAndChance:
-    _serializedList:
-    - Key: {fileID: 5434098778038927194, guid: d46d18d1a2de148b396be57eac576b84, type: 3}
-      Value: 1
-  spawnDelay: 2
+  spawnSprites:
+  - {fileID: 21300000, guid: 0fbb853801415409da8d3e1c410761f2, type: 3}
+  - {fileID: 21300000, guid: c45303f80fbd4491283fd1edfec7d601, type: 3}
+  - {fileID: 21300000, guid: 96fc3836220084df99f5eb065f726ef0, type: 3}
+  - {fileID: 21300000, guid: a27d71f7171de4f22be96aae135ace6e, type: 3}
+  - {fileID: 21300000, guid: 25fc841d3fe164365bcf7f5893c6cb79, type: 3}
+  - {fileID: 21300000, guid: 9d25dee4b04c5433ba445d6d0dbeb0d9, type: 3}
+  - {fileID: 21300000, guid: a1fa267af01af41edb4abecb7d569f48, type: 3}
+  - {fileID: 21300000, guid: 645ce158e35bc441bbf496f04ffcf558, type: 3}
+  - {fileID: 21300000, guid: df571d491db2742d786bc66c3e0dba23, type: 3}
+  - {fileID: 21300000, guid: 3c8d95a97bde74468b5366caa8802e72, type: 3}
+  - {fileID: 21300000, guid: 6ec9cb017929a4657b714cefaee079b4, type: 3}
+  - {fileID: 21300000, guid: 62f7bef44320b42619348d7409c49ccc, type: 3}
+  - {fileID: 21300000, guid: d883340753cb9437abd604e70fc3e272, type: 3}
+  - {fileID: 21300000, guid: 3377a7fa0699548588d71b1630adb590, type: 3}
+  - {fileID: 21300000, guid: c871620e94e3a4b1abe90f80eb378629, type: 3}
+  - {fileID: 21300000, guid: 908f001439ccf4cf794c77b32e0c55a3, type: 3}
+  - {fileID: 21300000, guid: 05e726ef1b57e4634832933b84958281, type: 3}
+  - {fileID: 21300000, guid: 1d1a6710570c841699eaa656dd069497, type: 3}
+  - {fileID: 21300000, guid: 3c55c70a146524c0b93bac7c3ee20942, type: 3}
+  - {fileID: 21300000, guid: 9f9de4048a410478fb11488a4558346d, type: 3}
+  - {fileID: 21300000, guid: 962fa0812dff045ce83a48996a84d3ed, type: 3}
+  - {fileID: 21300000, guid: 1295b6ae7f660478b883f51b29bf69cd, type: 3}
+  - {fileID: 21300000, guid: 6f13686365e324c23a87026a94f42531, type: 3}
+  spawnChances: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  clientPrefab: {fileID: 5434098778038927194, guid: d46d18d1a2de148b396be57eac576b84, type: 3}
+  spawnDelay: 1
 --- !u!4 &846956301
 Transform:
   m_ObjectHideFlags: 0
@@ -3659,11 +3703,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae37548dfc59f40c89cf76b70c098160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClientSpawner
-  spawnPrefabsAndChance:
-    _serializedList:
-    - Key: {fileID: 5434098778038927194, guid: d46d18d1a2de148b396be57eac576b84, type: 3}
-      Value: 1
-  spawnDelay: 2
+  spawnSprites:
+  - {fileID: 21300000, guid: 0fbb853801415409da8d3e1c410761f2, type: 3}
+  - {fileID: 21300000, guid: c45303f80fbd4491283fd1edfec7d601, type: 3}
+  - {fileID: 21300000, guid: 96fc3836220084df99f5eb065f726ef0, type: 3}
+  - {fileID: 21300000, guid: a27d71f7171de4f22be96aae135ace6e, type: 3}
+  - {fileID: 21300000, guid: 25fc841d3fe164365bcf7f5893c6cb79, type: 3}
+  - {fileID: 21300000, guid: 9d25dee4b04c5433ba445d6d0dbeb0d9, type: 3}
+  - {fileID: 21300000, guid: a1fa267af01af41edb4abecb7d569f48, type: 3}
+  - {fileID: 21300000, guid: 645ce158e35bc441bbf496f04ffcf558, type: 3}
+  - {fileID: 21300000, guid: df571d491db2742d786bc66c3e0dba23, type: 3}
+  - {fileID: 21300000, guid: 3c8d95a97bde74468b5366caa8802e72, type: 3}
+  - {fileID: 21300000, guid: 6ec9cb017929a4657b714cefaee079b4, type: 3}
+  - {fileID: 21300000, guid: 62f7bef44320b42619348d7409c49ccc, type: 3}
+  - {fileID: 21300000, guid: d883340753cb9437abd604e70fc3e272, type: 3}
+  - {fileID: 21300000, guid: 3377a7fa0699548588d71b1630adb590, type: 3}
+  - {fileID: 21300000, guid: c871620e94e3a4b1abe90f80eb378629, type: 3}
+  - {fileID: 21300000, guid: 908f001439ccf4cf794c77b32e0c55a3, type: 3}
+  - {fileID: 21300000, guid: 05e726ef1b57e4634832933b84958281, type: 3}
+  - {fileID: 21300000, guid: 1d1a6710570c841699eaa656dd069497, type: 3}
+  - {fileID: 21300000, guid: 3c55c70a146524c0b93bac7c3ee20942, type: 3}
+  - {fileID: 21300000, guid: 9f9de4048a410478fb11488a4558346d, type: 3}
+  - {fileID: 21300000, guid: 962fa0812dff045ce83a48996a84d3ed, type: 3}
+  - {fileID: 21300000, guid: 1295b6ae7f660478b883f51b29bf69cd, type: 3}
+  - {fileID: 21300000, guid: 6f13686365e324c23a87026a94f42531, type: 3}
+  spawnChances: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  clientPrefab: {fileID: 5434098778038927194, guid: d46d18d1a2de148b396be57eac576b84, type: 3}
+  spawnDelay: 1
 --- !u!4 &1016689242
 Transform:
   m_ObjectHideFlags: 0
@@ -4380,7 +4446,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.63, y: 0.92, z: -2.14}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4473,7 +4539,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 9349fc3aabb0d4d50a836723d0076438, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 67629b6e60afd4e77847368a27fe9af3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

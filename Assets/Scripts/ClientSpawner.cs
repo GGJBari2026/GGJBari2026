@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class ClientSpawner : MonoBehaviour
 {
-    [SerializedDictionary("Client", "Chance")]
-    public SerializedDictionary<GameObject, int> spawnPrefabsAndChance;
-
+    public Sprite[] spawnSprites;
+    public int[] spawnChances;
+    
+    [SerializeField] private GameObject clientPrefab;
     [SerializeField] private float spawnDelay;
     
     private void Start()
@@ -21,24 +22,25 @@ public class ClientSpawner : MonoBehaviour
         yield return new WaitForSeconds(spawnDelay);
         if (!GameManager.gameManager.gameStarted) yield break;
         var totalChance = 0;
-        foreach (var chance in spawnPrefabsAndChance.Values)
+        foreach (var chance in spawnChances)
         {
             totalChance += chance;
         }
         var randomValue = Random.Range(0, totalChance);
         var cumulativeChance = 0;
-        GameObject selectedPrefab = null;
-        foreach (var kvp in spawnPrefabsAndChance)
+        Sprite selectedSprite = null;
+        for (var i = 0; i < spawnSprites.Length; i++)
         {
-            cumulativeChance += kvp.Value;
+            cumulativeChance += spawnChances[i];
             if (randomValue < cumulativeChance)
             {
-                selectedPrefab = kvp.Key;
+                selectedSprite = spawnSprites[i];
                 break;
             }
         }
-        if (selectedPrefab == null) yield break;
-        var newClient = Instantiate(selectedPrefab, transform.position, Quaternion.identity);
+
+        var newClient = Instantiate(clientPrefab, transform.position, Quaternion.identity);
+        newClient.GetComponent<SpriteRenderer>().sprite = selectedSprite;
         var newClientManager = newClient.GetComponent<ClientManager>();
         newClientManager.OnEnd += SpawnClientSync;
     }
