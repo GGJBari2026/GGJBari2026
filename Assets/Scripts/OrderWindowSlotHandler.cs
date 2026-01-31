@@ -7,7 +7,7 @@ public class OrderWindowSlotHandler : MonoBehaviour
     [SerializeField] private OrderWindowHandler orderWindowHandler;
     [SerializeField] private int slotIndex;
     [SerializeField] private Image disabledImage;
-    [SerializeField] private Image currentImage;
+    [SerializeField] private MaskTemplateBuilder currentTemplate;
     
     public void Send()
     {
@@ -18,7 +18,7 @@ public class OrderWindowSlotHandler : MonoBehaviour
     private void OnEnable()
     {
         CheckDisable();
-        //currentImage.sprite = orderWindowHandler.client.generatedOrder.GetSpriteFromOrder();
+        currentTemplate.GenerateMask(SlotsManager.slotsManager.slots[slotIndex].currentMask);
     }
 
     private void CheckDisable()

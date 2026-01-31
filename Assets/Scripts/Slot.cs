@@ -31,7 +31,7 @@ public class Slot
                 errors++;
             }
         }
-        currentMask = null;
+        currentMask = new Mask();
         state = SlotState.OnShape;
         
         return errors;

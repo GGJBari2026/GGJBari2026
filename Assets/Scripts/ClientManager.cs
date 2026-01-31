@@ -87,6 +87,7 @@ public class ClientManager : MonoBehaviour
         GameManager.gameManager.ordersCompleted += 1;
         
         OnEnd?.Invoke();
+        MaskSlotsManager.maskSlotsManager.ClearMaskSlot(slotNumber);
         Destroy(gameObject);
     }
 }
