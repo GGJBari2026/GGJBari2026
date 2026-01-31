@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         if (currentTimer <= 0)
         {
             gameStarted = false;
+            AudioHandler.Instance.PlayLose();
             WindowManager.windowManager.mainUI.SetActive(false);
             WindowManager.windowManager.CloseWindow();
             WinScreenHandler.instance.ShowPanel();

@@ -35,6 +35,7 @@ public class ClientManager : MonoBehaviour
         if (currentTimer <= 0)
         {
             GameManager.gameManager.SubtractTime(20);
+            AudioHandler.Instance.PlayAway();
             Destroy(gameObject);
         }
     }
@@ -47,6 +48,11 @@ public class ClientManager : MonoBehaviour
         {
             interactable.SetAction(OpenOrderWindow);
             GameManager.gameManager.ordersTaken += 1;
+            AudioHandler.Instance.PlayTake();
+        }
+        else
+        {
+            AudioHandler.Instance.PlayCant();
         }
     }
     
@@ -78,10 +84,12 @@ public class ClientManager : MonoBehaviour
             }
             
             GameManager.gameManager.ordersCorrect += 1;
+            AudioHandler.Instance.PlayGood();
         }
         else
         {
             GameManager.gameManager.totalErrors += errors;
+            AudioHandler.Instance.PlayBad();
         }
         
         GameManager.gameManager.ordersCompleted += 1;
