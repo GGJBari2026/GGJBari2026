@@ -35,6 +35,13 @@ public class ProgressSlotHandler : MonoBehaviour
                     currentImage.sprite = image.sprite;
                 }
             });
+            
+            if (i == 0)
+            {
+                toggle.isOn = true;
+                currentValue = 0;
+                currentImage.sprite = image.sprite;
+            }
         }
     }
 

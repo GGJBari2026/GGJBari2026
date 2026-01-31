@@ -4,6 +4,7 @@ using UnityEngine;
 public class WindowManager : MonoBehaviour
 {
     public static WindowManager windowManager;
+    [SerializeField] private GameObject mainUI;
     [SerializeField] private GameObject[] windows;
     
     public bool windowOpened;
@@ -17,12 +18,14 @@ public class WindowManager : MonoBehaviour
             windows[i].SetActive(i == index);
         }
         
+        mainUI.SetActive(false);
         windowOpened = true;
     }
 
     public void CloseWindow()
     {
         for (var i = 0; i < windows.Length; i++) windows[i].SetActive(false);
+        mainUI.SetActive(true);
         windowOpened = false;
     }
 }
