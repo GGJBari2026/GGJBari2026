@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private float timeInSeconds;
+    public float totalTime;
     public static GameManager gameManager;
     private float currentTimer;
     public bool gameStarted;
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         while (!gameStarted) return;
+        totalTime += Time.deltaTime;
         currentTimer -= Time.deltaTime;
         
         timerImage.fillAmount = currentTimer / timeInSeconds;
@@ -50,7 +52,9 @@ public class GameManager : MonoBehaviour
         if (currentTimer <= 0)
         {
             gameStarted = false;
-            Debug.Log("Time's up! Game Over.");
+            WindowManager.windowManager.mainUI.SetActive(false);
+            WindowManager.windowManager.CloseWindow();
+            WinScreenHandler.instance.ShowPanel();
         }
     }
     

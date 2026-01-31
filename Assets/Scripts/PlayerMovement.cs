@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void Update()
     {
-        if (WindowManager.windowManager.windowOpened) return;
+        if (WindowManager.windowManager.windowOpened || !GameManager.gameManager.gameStarted) return;
         
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
