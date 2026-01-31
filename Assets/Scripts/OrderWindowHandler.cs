@@ -7,6 +7,7 @@ public class OrderWindowHandler : MonoBehaviour
     public void CloseWindow()
     {
         gameObject.SetActive(false);
+        WindowManager.windowManager.mainUI.SetActive(true);
         WindowManager.windowManager.windowOpened = false;
     }
 }

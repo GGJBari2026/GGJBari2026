@@ -5,7 +5,8 @@ public class WindowManager : MonoBehaviour
 {
     public static WindowManager windowManager;
     [SerializeField] private GameObject orderWindow;
-    [SerializeField] private GameObject mainUI;
+    [SerializeField] private GameObject orderShowWindow;
+    [SerializeField] public GameObject mainUI;
     [SerializeField] private GameObject[] windows;
     
     public bool windowOpened;
@@ -33,7 +34,22 @@ public class WindowManager : MonoBehaviour
     public void OpenOrderWindow(ClientManager client)
     {
         orderWindow.GetComponent<OrderWindowHandler>().client = client;
+        mainUI.SetActive(false);
         orderWindow.SetActive(true);
         windowOpened = true;
+    }
+    
+    public void OpenShowOrdersWindow()
+    {
+        orderShowWindow.SetActive(true);
+        mainUI.SetActive(false);
+        windowOpened = true;
+    }
+    
+    public void CloseOrderShowWindow()
+    {
+        orderShowWindow.SetActive(false);
+        mainUI.SetActive(true);
+        windowOpened = false;
     }
 }
