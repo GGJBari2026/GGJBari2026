@@ -293,8 +293,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -546, y: 43.028984}
-  m_SizeDelta: {x: 210.973, y: 106.971}
+  m_AnchoredPosition: {x: -464.94757, y: 43.028984}
+  m_SizeDelta: {x: 373.0779, y: 106.971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7580099131609449162
 CanvasRenderer:
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -562,8 +562,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -202.78596, y: -63.942017}
-  m_SizeDelta: {x: 210.973, y: 106.971}
+  m_AnchoredPosition: {x: -150.1, y: -76.5}
+  m_SizeDelta: {x: 210.973, y: 103.5782}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6288300359430974820
 CanvasRenderer:
@@ -620,8 +620,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1110,8 +1110,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -202.78596, y: 149.99998}
-  m_SizeDelta: {x: 210.973, y: 106.971}
+  m_AnchoredPosition: {x: -150.1, y: 156.3}
+  m_SizeDelta: {x: 210.973, y: 103.5782}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8284564571655474012
 CanvasRenderer:
@@ -1168,8 +1168,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1380,8 +1380,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -546, y: 150}
-  m_SizeDelta: {x: 210.973, y: 106.971}
+  m_AnchoredPosition: {x: -464.94757, y: 150}
+  m_SizeDelta: {x: 373.0779, y: 106.971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7220983829566798841
 CanvasRenderer:
@@ -1444,7 +1444,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1500,7 +1500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4360311836434745372
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1517,8 +1517,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -202.78596, y: -170.91302}
-  m_SizeDelta: {x: 210.973, y: 106.971}
+  m_AnchoredPosition: {x: -150.1, y: -164.5}
+  m_SizeDelta: {x: 210.973, y: 103.5782}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &539542405028275731
 CanvasRenderer:
@@ -1575,8 +1575,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1770,7 +1770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4452009091492714288
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1787,8 +1787,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -488.69797, y: -170.91302}
-  m_SizeDelta: {x: 325.574, y: 106.971}
+  m_AnchoredPosition: {x: -363.6165, y: -170.91302}
+  m_SizeDelta: {x: 575.7346, y: 106.971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3012315252445821806
 CanvasRenderer:
@@ -1851,7 +1851,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2056,8 +2056,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -488.69797, y: -63.942017}
-  m_SizeDelta: {x: 325.574, y: 106.971}
+  m_AnchoredPosition: {x: -363.6165, y: -63.942017}
+  m_SizeDelta: {x: 575.7346, y: 106.971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4848351464608612629
 CanvasRenderer:
@@ -2087,7 +2087,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Durata complessiva
+  m_text: 'Durata
+
+    complessiva'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81de4df82f14744d497b84864b012f5b, type: 2}
   m_sharedMaterial: {fileID: -3277668988318021534, guid: 81de4df82f14744d497b84864b012f5b, type: 2}
@@ -2120,14 +2122,14 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 40
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -2193,8 +2195,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -202.78596, y: 43.028984}
-  m_SizeDelta: {x: 210.973, y: 106.971}
+  m_AnchoredPosition: {x: -150.1, y: 48.1182}
+  m_SizeDelta: {x: 210.973, y: 103.5782}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3917771904172326422
 CanvasRenderer:
@@ -2251,8 +2253,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

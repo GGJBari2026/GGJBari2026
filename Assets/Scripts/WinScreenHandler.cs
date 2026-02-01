@@ -44,13 +44,38 @@ public class WinScreenHandler : MonoBehaviour
         
         score = (GameManager.gameManager.ordersHappy * 1.0f - GameManager.gameManager.totalErrors * 0.5f) /
                 Mathf.Max(1, GameManager.gameManager.ordersCompleted);
-        valutation = score >= 0.7f ? Valutation.SUPERBO :
-                    score >= 0.4f ? Valutation.DISCRETO :
-                    score >= 0.1f ? Valutation.MEDIOCRE :
+        valutation = score >= 0.5f ? Valutation.SUPERBO :
+                    score >= 0.2f ? Valutation.DISCRETO :
+                    score >= 0.05f ? Valutation.MEDIOCRE :
                     Valutation.PESSIMO;
         
-        scoreText.text = score.ToString("F2");
-        valutationText.text = valutation.ToString();
+        scoreText.text = (score * 10).ToString("F2");
+        
+        valutationText.text = valutation switch
+        {
+            Valutation.SUPERBO => "Superbo",
+            Valutation.DISCRETO => "Discreto",
+            Valutation.MEDIOCRE => "Mediocre",
+            Valutation.PESSIMO => "Pessimo"
+        };
+        
+        switch (valutation)
+        {
+            case Valutation.SUPERBO:
+                valutationText.color = Color.forestGreen;
+                break;
+            case Valutation.DISCRETO:
+                valutationText.color = Color.orange;
+                break;
+            case Valutation.MEDIOCRE:
+                valutationText.color = Color.darkOrange;
+                break;
+            case Valutation.PESSIMO:
+                valutationText.color = Color.red;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
 
     public void BackToMenu()
