@@ -10,7 +10,7 @@ public class PauseManager : MonoBehaviour
     void Update()
     {
         // Premi ESC per aprire/chiudere il menu di pausa
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !WindowManager.windowManager.windowOpened)
         {
             if (isPaused)
                 ResumeGame();

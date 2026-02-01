@@ -16,10 +16,10 @@ public class MaskTemplateBuilder : MonoBehaviour
     public void GenerateMask(Mask mask)
     {
         shapeImage.sprite = mask.attributes.ContainsKey("shape") ? GameManager.gameManager.masksSprites["shape"][mask.attributes["shape"]] : noSprite;
-        shapeColorImage.sprite = mask.colors.ContainsKey("shape") ? GameManager.gameManager.masksColors["shape"][mask.colors["shape"]] : whiteSprite;
+        shapeColorImage.sprite = mask.colors.ContainsKey("shape") ? GameManager.gameManager.masksColors["shape"][mask.colors["shape"]] : noSprite;
         patternImage.sprite = mask.attributes.ContainsKey("pattern") ? GameManager.gameManager.masksSprites["pattern"][mask.attributes["pattern"]] : noSprite;
-        patternColorImage.sprite = mask.colors.ContainsKey("pattern") ? GameManager.gameManager.masksColors["pattern"][mask.colors["pattern"]] : whiteSprite;
-        outlineImage.sprite = mask.attributes.ContainsKey("shape") ? GameManager.gameManager.masksOutlines[mask.attributes["shape"]] : whiteSprite;
+        patternColorImage.sprite = mask.colors.ContainsKey("pattern") ? GameManager.gameManager.masksColors["pattern"][mask.colors["pattern"]] : noSprite;
+        outlineImage.sprite = mask.attributes.ContainsKey("shape") ? GameManager.gameManager.masksOutlines[mask.attributes["shape"]] : noSprite;
         eyeAndMouthImage.sprite = mask.attributes.ContainsKey("decoration") ? GameManager.gameManager.masksSprites["decoration"][mask.attributes["decoration"]] : noSprite;
     }
 }
