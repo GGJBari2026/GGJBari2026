@@ -18,24 +18,44 @@ public class ClientManager : MonoBehaviour
     private bool orderStarted;
     
     public event Action OnEnd;
+
+    [SerializeField] private Sprite happySprite;
+    [SerializeField] private Sprite irritatedSprite;
+    [SerializeField] private Sprite angrySprite;
+    [SerializeField] private Sprite leftSprite;
+    [SerializeField] private SpriteRenderer emotionSr;
     
     private void Start()
     {
         if (!special) generatedOrder = MaskGenerator.GenerateRandomMask();
         interactable.SetAction(StartOrder);
         currentTimer = patienceTime;
+        emotionSr.sprite = happySprite;
     }
 
     private void Update()
     {
         if (!orderStarted) return;
-        patienceBar.localPosition = new Vector3(currentTimer / patienceTime - 4.1f, 0, 0);
+        patienceBar.localPosition = new Vector3((currentTimer / patienceTime - 1) * 4.1f, 0, 0);
         currentTimer -= Time.deltaTime;
+        
+        if (currentTimer >= patienceHappy)
+        {
+            emotionSr.sprite = happySprite;
+        }
+        else if (currentTimer >= patienceIrritated)
+        {
+            emotionSr.sprite = irritatedSprite;
+        } else 
+        {
+            emotionSr.sprite = angrySprite;
+        }
         
         if (currentTimer <= 0)
         {
             GameManager.gameManager.SubtractTime(20);
             AudioHandler.Instance.PlayAway();
+            emotionSr.sprite = leftSprite;
             Destroy(gameObject);
         }
     }
