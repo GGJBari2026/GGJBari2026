@@ -17,3 +17,5 @@ About:
 Technology Notes:
 
 Other softwares: Clip Studio Paint (2D illustrations), Canva Pro (UI and graphics), Substance Painter + Adobe Photoshop (texturing), Blender (modeling and shading), Adobe Animate (animations), GIMP (sprite editing)
+
+THE GAME IS STILL ON ALPHA, THIS MEANS THAT SOMETHING CAN BE BUGGED OR THE GAME CAN CRASH, WE ARE GOING TO FIX ALL THE BUGS IN THE NEXT RELESES! thank you.
