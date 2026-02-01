@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerInteractionsDetector : MonoBehaviour
 {
     private Interactable currentInteractable;
+    [SerializeField] private GameObject toast;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -12,6 +13,7 @@ public class PlayerInteractionsDetector : MonoBehaviour
             if (interactable != null)
             {
                 currentInteractable = interactable;
+                toast.SetActive(true);
             }
         }
     }
@@ -29,6 +31,7 @@ public class PlayerInteractionsDetector : MonoBehaviour
         if (other.CompareTag("Interactable"))
         {
             currentInteractable = null;
+            toast.SetActive(false);
         }
     }
 }
