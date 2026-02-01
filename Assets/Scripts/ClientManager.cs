@@ -29,7 +29,7 @@ public class ClientManager : MonoBehaviour
     private void Update()
     {
         if (!orderStarted) return;
-        patienceBar.localPosition = new Vector3(currentTimer / patienceTime - 1, 0, 0);
+        patienceBar.localPosition = new Vector3(currentTimer / patienceTime - 4.1f, 0, 0);
         currentTimer -= Time.deltaTime;
         
         if (currentTimer <= 0)
