@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
         totalTime += Time.deltaTime;
         currentTimer -= Time.deltaTime;
         
-        timerImage.fillAmount = currentTimer / timeInSeconds;
+        timerImage.fillAmount = (currentTimer / timeInSeconds) * 0.8f + 0.2f;
         
         if (currentTimer <= 0)
         {
