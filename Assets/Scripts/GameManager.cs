@@ -53,8 +53,8 @@ public class GameManager : MonoBehaviour
         {
             gameStarted = false;
             AudioHandler.Instance.PlayLose();
-            WindowManager.windowManager.mainUI.SetActive(false);
             WindowManager.windowManager.CloseWindow();
+            WindowManager.windowManager.mainUI.SetActive(false);
             WinScreenHandler.instance.ShowPanel();
         }
     }
