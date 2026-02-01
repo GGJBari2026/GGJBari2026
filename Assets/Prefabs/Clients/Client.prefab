@@ -104,8 +104,8 @@ GameObject:
   - component: {fileID: 8920026335108761285}
   - component: {fileID: 451805872249082545}
   - component: {fileID: 2581117422922710415}
-  - component: {fileID: 2873842020473237523}
   - component: {fileID: 1288587354574170960}
+  - component: {fileID: 7482432764143175753}
   m_Layer: 0
   m_Name: Client
   m_TagString: Interactable
@@ -217,8 +217,20 @@ MonoBehaviour:
   angrySprite: {fileID: 21300000, guid: af2190d4037204e13af37876b3247198, type: 3}
   leftSprite: {fileID: 21300000, guid: dc7b204d822b24ea7b1aab9352d43f71, type: 3}
   emotionSr: {fileID: 7242457254430748382}
---- !u!136 &2873842020473237523
-CapsuleCollider:
+--- !u!114 &1288587354574170960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5434098778038927194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61817e0faed424893a0d4c790bb86d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+--- !u!65 &7482432764143175753
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -235,23 +247,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 10.24
-  m_Height: 20.48
-  m_Direction: 1
+  serializedVersion: 3
+  m_Size: {x: 60, y: 20.48, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1288587354574170960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5434098778038927194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61817e0faed424893a0d4c790bb86d82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
 --- !u!1 &6492217698473619598
 GameObject:
   m_ObjectHideFlags: 0
