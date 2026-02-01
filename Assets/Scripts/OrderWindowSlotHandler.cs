@@ -7,6 +7,7 @@ public class OrderWindowSlotHandler : MonoBehaviour
     [SerializeField] private OrderWindowHandler orderWindowHandler;
     [SerializeField] private int slotIndex;
     [SerializeField] private Image disabledImage;
+    [SerializeField] private Image background;
     [SerializeField] private MaskTemplateBuilder currentTemplate;
     
     public void Send()
@@ -24,6 +25,7 @@ public class OrderWindowSlotHandler : MonoBehaviour
     private void CheckDisable()
     {
         disabledImage.enabled = SlotsManager.slotsManager.slots[slotIndex].state != SlotState.Complete;
+        background.color = disabledImage.enabled ? Color.gray : Color.white;
     }
     
 }

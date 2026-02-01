@@ -9,6 +9,7 @@ public class ProgressSlotHandler : MonoBehaviour
     [SerializeField] private int slotIndex;
 
     [SerializeField] private Image disabledImage;
+    [SerializeField] private Image background;
     
     [SerializeField] private ToggleGroup togglesParent;
     [SerializeField] private GameObject togglePrefab;
@@ -100,5 +101,6 @@ public class ProgressSlotHandler : MonoBehaviour
     private void CheckDisable()
     {
         disabledImage.enabled = SlotsManager.slotsManager.slots[slotIndex].state != state;
+        background.color = disabledImage.enabled ? Color.gray : Color.white;
     }
 }
