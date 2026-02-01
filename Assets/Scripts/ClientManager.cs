@@ -80,6 +80,7 @@ public class ClientManager : MonoBehaviour
                 GameManager.gameManager.ordersIrritated++;
             } else 
             {
+                GameManager.gameManager.AddTime(5);
                 GameManager.gameManager.ordersAngry++;
             }
             
@@ -89,6 +90,7 @@ public class ClientManager : MonoBehaviour
         else
         {
             GameManager.gameManager.totalErrors += errors;
+            GameManager.gameManager.SubtractTime(1 * errors);
             AudioHandler.Instance.PlayBad();
         }
         

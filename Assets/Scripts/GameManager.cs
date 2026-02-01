@@ -67,11 +67,13 @@ public class GameManager : MonoBehaviour
     
     public void AddTime(float seconds)
     {
+        PlayerNotificationHandler.playerNotificationHandler.NotifyGreen("+" + seconds);
         currentTimer += seconds;
     }
     
     public void SubtractTime(float seconds)
     {
+        PlayerNotificationHandler.playerNotificationHandler.NotifyRed("-" + seconds);
         currentTimer -= seconds;
     }
 }
