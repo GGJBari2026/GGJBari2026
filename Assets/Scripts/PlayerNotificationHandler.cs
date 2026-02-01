@@ -18,7 +18,7 @@ public class PlayerNotificationHandler : MonoBehaviour
     public void NotifyGreen(string message)
     {
         obj.SetActive(true);
-        notificationText.color = Color.green;
+        notificationText.colorGradient = new VertexGradient(Color.green, Color.green, Color.green, Color.green);
         notificationText.text = message;
         animator.Play(animation.name, 0, 0f);
     }
@@ -26,7 +26,7 @@ public class PlayerNotificationHandler : MonoBehaviour
     public void NotifyRed(string message)
     {
         obj.SetActive(true);
-        notificationText.color = Color.red;
+        notificationText.colorGradient = new VertexGradient(Color.red, Color.red, Color.red, Color.red);
         notificationText.text = message;
         animator.Play(animation.name, 0, 0f);
     }
