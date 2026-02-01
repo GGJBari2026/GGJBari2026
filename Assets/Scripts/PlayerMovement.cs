@@ -18,24 +18,24 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position += Vector3.right * (Time.deltaTime * speed);
             lastWalkedRight = true;
-            isWalkingVal = 2;
+            isWalkingVal = 1;
         }
         else if (Input.GetAxisRaw("Horizontal") < 0)
         {
             transform.position += Vector3.left * (Time.deltaTime * speed);
             lastWalkedRight = false;
-            isWalkingVal = 1;
+            isWalkingVal = 2;
         }
         
         if (Input.GetAxisRaw("Vertical") > 0)
         {
             transform.position += Vector3.forward * (Time.deltaTime * speed);
-            isWalkingVal = lastWalkedRight ? 2 : 1;
+            isWalkingVal = lastWalkedRight ? 1 : 2;
         }
         else if (Input.GetAxisRaw("Vertical") < 0)
         {
             transform.position += Vector3.back * (Time.deltaTime * speed);
-            isWalkingVal = lastWalkedRight ? 2 : 1;
+            isWalkingVal = lastWalkedRight ? 1 : 2;
         }
         
         animator.SetInteger("IsWalking", isWalkingVal);
