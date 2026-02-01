@@ -201,9 +201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174e0572096824b8191e68bf9ca6a4ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClientManager
-  patienceTime: 50
-  patienceHappy: 20
-  patienceIrritated: 10
+  patienceTime: 100
+  patienceHappy: 40
+  patienceIrritated: 20
   special: 0
   generatedOrder:
     attributes:
