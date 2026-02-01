@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed = 7f;
+    [SerializeField] private Animator animator;
     
     private void Update()
     {
@@ -11,20 +12,22 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
-            transform.Translate(Vector3.right * (Time.deltaTime * speed));
+            transform.position += Vector3.right * (Time.deltaTime * speed);
+            animator.SetBool("isFlipped", false);
         }
         else if (Input.GetAxisRaw("Horizontal") < 0)
         {
-            transform.Translate(Vector3.left * (Time.deltaTime * speed));
+            transform.position += Vector3.left * (Time.deltaTime * speed);
+            animator.SetBool("isFlipped", true);
         }
         
         if (Input.GetAxisRaw("Vertical") > 0)
         {
-            transform.Translate(Vector3.forward * (Time.deltaTime * speed));
+            transform.position += Vector3.forward * (Time.deltaTime * speed);
         }
         else if (Input.GetAxisRaw("Vertical") < 0)
         {
-            transform.Translate(Vector3.back * (Time.deltaTime * speed));
+            transform.position += Vector3.back * (Time.deltaTime * speed);
         }
     }
     
