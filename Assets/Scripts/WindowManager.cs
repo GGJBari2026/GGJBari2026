@@ -13,6 +13,17 @@ public class WindowManager : MonoBehaviour
 
     private void Start() => windowManager = this;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E))
+        {
+            if (windowOpened)
+            {
+                CloseWindow();
+            }
+        }
+    }
+
     public void OpenWindow(int index)
     {
         for (var i = 0; i < windows.Length; i++)
